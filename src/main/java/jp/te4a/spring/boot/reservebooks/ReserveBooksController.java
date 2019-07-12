@@ -23,4 +23,9 @@ public class ReserveBooksController {
     //model.addAttribute("books", bookService.findAll());
     return "books/reserve";
   }
+  
+  @GetMapping(path="test")
+  String list2() {
+	  return "books/reserve";
+  }
 }

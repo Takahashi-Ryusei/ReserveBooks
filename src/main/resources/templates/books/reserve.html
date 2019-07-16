@@ -7,9 +7,7 @@
         <title>書籍登録一覧画面</title>
     </head>
     <body>
-
-
-        <table>
+        <table class="container">
             <tr th:each="book : ${books}">
                 <td th:text="${book.id}">100</td>
                 <td th:text="${book.title}">タイトルＡ</td>
@@ -19,7 +17,7 @@
             </tr>
 </table>
         <form th:action="@{/books/list}" method="post">
-            <table>
+            <table class="container">
                 <tr><td>タイトル:</td><td><input type="text" name="title" /></td></tr>
                 <tr><td>著者：</td><td><input type="text" name="writter" /></td></tr>
                 <tr><td>出版社：</td><td><input type="text" name="publisher" /></td></tr>

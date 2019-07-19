@@ -24,8 +24,8 @@ public class ReserveBooksController {
     return "books/reserve";
   }
   
-  @GetMapping(path="test")
+  @PostMapping(path="check")
   String list2() {
-	  return "books/reserve";
+	  return "books/check";
   }
 }

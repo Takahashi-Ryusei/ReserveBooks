@@ -8,13 +8,15 @@
     </head>
     <body>
     <h1>書籍　注文</h1><br>
-    <p>注文する本</p><p><input type="text" value="書籍名"><input type="text" value="出版社"></p>
-    <input type="text" value="作者名"><input type="text" value="冊数"><br>
-    <p>なまえ</p><input type="text" value="なまえ"><br>    
-    <p>電話番号</p><input type="text" value="0120-444-444"><br>
+    <form action="books/check" method="POST">
+    <p>注文する本</p><p><input type="text" name="booktitle" placeholder="書籍名"><input type="text" name="publisher" placeholder="出版社"></p>
+    <input type="text" name="writer" placeholder="作者名"><input type="text" name="number" placeholder="冊数"><br>
+    <p>なまえ</p><input type="text" name="name" placeholder="なまえ"><br>    
+    <p>電話番号</p><input type="tel" name="tel"><br>
     <p>連絡希望<input type="radio" name="renraku" value="yes">する
-　　　　<input type="radio" name="gender" value="no">しない</p><br>
+　　　　<input type="radio" name="renraku" value="no" checked>しない</p><br>
 	<p><button type="submit">確定</button></p>
+	</form>
     
       <!--    <form th:action="@{/books/list}" method="post">
             <table class="container">

@@ -4,22 +4,20 @@
 	    <link rel="stylesheet" type="text/css"
 	    th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
         <meta charset="UTF-8" />
-        <title>書籍登録一覧画面</title>
+        <title>書籍　注文</title>
     </head>
     <body>
-
-
-        <table>
-            <tr th:each="book : ${books}">
-                <td th:text="${book.id}">100</td>
-                <td th:text="${book.title}">タイトルＡ</td>
-                <td th:text="${book.writter}">著者Ａ</td>
-                <td th:text="${book.publisher}">出版社Ａ</td>
-                <td th:text="${book.price}">100</td>
-            </tr>
-</table>
-        <form th:action="@{/books/list}" method="post">
-            <table>
+    <h1>書籍　注文</h1><br>
+    <p>注文する本</p><p><input type="text" value="書籍名"><input type="text" value="出版社"></p>
+    <input type="text" value="作者名"><input type="text" value="冊数"><br>
+    <p>なまえ</p><input type="text" value="なまえ"><br>    
+    <p>電話番号</p><input type="text" value="0120-444-444"><br>
+    <p>連絡希望<input type="radio" name="renraku" value="yes">する
+　　　　<input type="radio" name="gender" value="no">しない</p><br>
+	<p><button type="submit">確定</button></p>
+    
+      <!--    <form th:action="@{/books/list}" method="post">
+            <table class="container">
                 <tr><td>タイトル:</td><td><input type="text" name="title" /></td></tr>
                 <tr><td>著者：</td><td><input type="text" name="writter" /></td></tr>
                 <tr><td>出版社：</td><td><input type="text" name="publisher" /></td></tr>
@@ -27,6 +25,6 @@
             </table>
             <input type="submit" />
         </form>
-     
+     -->
      </body>
 </html>

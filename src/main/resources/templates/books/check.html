@@ -4,19 +4,17 @@
 	    <link rel="stylesheet" type="text/css"
 	    th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
         <meta charset="UTF-8" />
-        <title>書籍　注文</title>
+        <title>注文 確認</title>
     </head>
     <body>
-    <p>waaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-      <!--    <form th:action="@{/books/list}" method="post">
-            <table class="container">
-                <tr><td>タイトル:</td><td><input type="text" name="title" /></td></tr>
-                <tr><td>著者：</td><td><input type="text" name="writter" /></td></tr>
-                <tr><td>出版社：</td><td><input type="text" name="publisher" /></td></tr>
-                <tr><td>個数：</td><td><input type="text" name="price" /></td></tr>
-            </table>
-            <input type="submit" />
-        </form>
-     -->
+    <p th:text="${message}"></p>
+	    <table>
+            <tr >
+                <td th:text="${book.title}">タイトル<br></td>
+                <td th:text="${book.publisher}">出版社<br></td>
+                <td th:text="${book.writter}">作者<br></td>
+                <td th:text="${book.tel}">電話番号<br></td>
+            </tr>
+		</table>
      </body>
 </html>

@@ -5,9 +5,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class ReserveBooksForm {
-  private Integer id ;
   private String title;
-  private String writter;
   private String publisher;
-  private Integer price;
+  private String writter;
+  private Integer number;
+  private Integer tel;
+  private boolean call;
 }

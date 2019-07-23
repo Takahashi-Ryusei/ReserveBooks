@@ -1,11 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>注文確認</title>
-</head>
-<body>
-<p>わあああああああああああああああああああああああ
-</p>
-</body>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+	    <link rel="stylesheet" type="text/css"
+	    th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+        <meta charset="UTF-8" />
+        <title>注文 確認</title>
+    </head>
+    <body>
+    <p th:text="${message}"></p>
+	    <table>
+            <tr >
+                <td th:text="${book.title}">タイトル<br></td>
+                <td th:text="${book.publisher}">出版社<br></td>
+                <td th:text="${book.writter}">作者<br></td>
+                <td th:text="${book.tel}">電話番号<br></td>
+            </tr>
+		</table>
+     </body>
 </html>

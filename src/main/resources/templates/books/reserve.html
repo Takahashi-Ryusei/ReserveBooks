@@ -8,8 +8,9 @@
     </head>
     <body>
     <h1>書籍　注文</h1><br>
-    <form action="/books/check" method="POST" th:field="*{ReserveBooksForm}">
-    <p>注文する本</p><p><input type="text" name="booktitle" placeholder="書籍名"><input type="text" name="publisher" placeholder="出版社"></p>
+    <form action="/books/check" method="POST" th:object="*{reserveBooksForm}">
+    
+    <p>注文する本</p><p><input type="text" name="booktitle" th:field="*{title}"><input type="text" name="publisher" placeholder="出版社"></p>
     <input type="text" name="writer" placeholder="作者名"><input type="text" name="number" placeholder="冊数"><br>
     <p>なまえ</p><input type="text" name="name" placeholder="なまえ"><br>    
     <p>電話番号</p><input type="tel" name="tel"><br>

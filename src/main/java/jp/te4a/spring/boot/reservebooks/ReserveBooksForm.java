@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 public class ReserveBooksForm {
   private String title;
   private String publisher;
-  private String writter;
+  private String writer;
   private Integer number;
-  private Integer tel;
+  private String name;
+  private String tel;
   private boolean call;
 }

@@ -36,13 +36,15 @@ public class ReserveBooksController {
 	}
   
   @RequestMapping(value="/check", method=RequestMethod.POST)
-  String list2(Model model) {
+  String list2(Model model, ReserveBooksForm form) {
 	  ReserveBooksForm bf=new ReserveBooksForm();
-	  bf.setTitle("あいまいみー");
-	  bf.setPublisher("竹書房");
-	  bf.setWritter("ちょぼらうにょぽみ");
-	  bf.setTel(0120222222);
-	model.addAttribute("messagg","test");
+	  bf.setTitle(form.getTitle());
+	  bf.setPublisher(form.getPublisher());
+	  bf.setWriter(form.getWriter());
+	  bf.setNumber(form.getNumber());
+	  bf.setName(form.getName());
+	  bf.setTel(form.getTel());
+	model.addAttribute("message","test");
 	  model.addAttribute("book",bf);
 	  return "books/check";
   }

@@ -11,5 +11,5 @@ public class ReserveBooksForm {
   private Integer number;
   private String name;
   private String tel;
-  private boolean call;
+  private Integer call;
 }

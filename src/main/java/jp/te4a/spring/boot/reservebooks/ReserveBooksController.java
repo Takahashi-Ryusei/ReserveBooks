@@ -44,6 +44,7 @@ public class ReserveBooksController {
 	  bf.setNumber(form.getNumber());
 	  bf.setName(form.getName());
 	  bf.setTel(form.getTel());
+	  bf.setCall(form.getCall());
 	model.addAttribute("message","test");
 	  model.addAttribute("book",bf);
 	  return "books/check";

@@ -1,23 +1,38 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-	    <link rel="stylesheet" type="text/css"
-	    th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
-        <meta charset="UTF-8" />
-        <title>注文 確認</title>
-    </head>
-    <body>
-    <p th:text="${message}"></p>
-	    <table>
-            <tr >
-                <td th:text="${book.title}">タイトル<br></td>
-                <td th:text="${book.publisher}">出版社<br></td>
-                <td th:text="${book.writer}">作者<br></td>
-                <td th:text="${book.number}">冊数<br></td>
-                <td th:text="${book.name}">名前<br></td>
-                <td th:text="${book.tel}">電話番号<br></td>
-                <td th:text="${book.call}">連絡希望<br></td>
-            </tr>
-		</table>
-     </body>
+	<head>
+		<link rel="stylesheet" type="text/css"th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+		<meta charset="UTF-8" />
+		<title>注文 確認</title>
+	</head>
+<body>
+	<h1>注文確認</h1>
+	<div class="container">
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>タイトル</th>
+					<th>出版社</th>
+					<th>作者</th>
+					<th>冊数</th>
+					<th>名前</th>
+					<th>電話番号</th>
+					<th>連絡希望</th>
+				</tr>
+			</thead>
+				<tbody>
+					<tr>
+						<td th:text="${book.title}">タイトル<br></td>
+						<td th:text="${book.publisher}">出版社<br></td>
+						<td th:text="${book.writer}">作者<br></td>
+						<td th:text="${book.number}">冊数<br></td>
+						<td th:text="${book.name}">名前<br></td>
+						<td th:text="${book.tel}">電話番号<br></td>
+						<td th:text="${book.call}">連絡希望<br></td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+	</body>
 </html>

@@ -4,10 +4,11 @@
 	<head>
 		<link rel="stylesheet" type="text/css"th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
 		<meta charset="UTF-8" />
-		<title>注文 確認</title>
+		<title> 注文 確認</title>
 	</head>
 <body>
-	<h1>注文確認</h1>
+		
+	<h2>注文確認</h2>
 	<div class="container">
 		<table class="table table-striped">
 			<thead>
@@ -23,16 +24,25 @@
 			</thead>
 				<tbody>
 					<tr>
-						<td th:text="${book.title}">タイトル<br></td>
-						<td th:text="${book.publisher}">出版社<br></td>
-						<td th:text="${book.writer}">作者<br></td>
-						<td th:text="${book.number}">冊数<br></td>
-						<td th:text="${book.name}">名前<br></td>
-						<td th:text="${book.tel}">電話番号<br></td>
-						<td th:text="${book.call}">連絡希望<br></td>
+						<td th:text="${book.title}">タイトル</td>
+						<td th:text="${book.publisher}">出版社</td>
+						<td th:text="${book.writer}">作者</td>
+						<td th:text="${book.number}">冊数</td>
+						<td th:text="${book.name}">名前</td>
+						<td th:text="${book.tel}">電話番号</td>
+						<td th:text="${book.call}">連絡希望</td>
 					</tr>
 				</tbody>
 			</table>	
+			
+			<form action="/books/complete" method="POST" th:object="${reserveBooksForm}">
+				<button type="submit" class="kkt">確定</button>
+			</form>
+			
+			<form action="/books" method="GET" th:object="${reserveBooksForm}">
+				<button type="submit" class="sus">修正</button>
+			</form>
+			
 		</div>
 	</body>
 </html>

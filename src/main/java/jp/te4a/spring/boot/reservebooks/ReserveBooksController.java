@@ -60,7 +60,7 @@ public class ReserveBooksController {
 	  bf.setName(form.getName());
 	  bf.setTel(form.getTel());
 	  bf.setCall(form.getCall());
-	  model.addAttribute("message","test");
+	  model.addAttribute("message","注文確認");
 	  model.addAttribute("book",bf);
 	  return "books/check";
   }

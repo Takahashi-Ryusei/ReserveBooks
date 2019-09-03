@@ -8,7 +8,20 @@
     </head>
     <body>
     <h1>書籍　注文</h1><br>
+    
     <form action="/books/check" method="POST" th:object="${reserveBooksForm}">
+    
+    <ul>
+      <li th:each="e : ${#fields.detailedErrors()}"
+        th:class="${e.global}? globalerrMsg : fielderrMsg" th:text="${e.message}" />
+    </ul>
+    <table>
+      <tr>
+        <td>
+        <input type="text" th:field="*{name}"
+          th:errorclass="fieldError" />
+        </td>
+      </tr>
     
     <p>注文する本</p><p><input type="text" name="booktitle" th:field="*{title}" ><input type="text" name="publisher" placeholder="出版社"　th:field="*{publisher}"></p>
     <input type="text" name="writer" placeholder="作者名" th:field="*{writer}"><input type="text" name="number" placeholder="冊数"th:field="*{number}"><br>

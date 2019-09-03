@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<meta charset="UTF-8" />
+<title>予約確認</title>
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" />
+</head>
+<body>
+	<div class="container">
+		<h2 class="form-signin-heading">予約一覧</h2>
+		<table class="table table-striped table-bordered table-responsive">
+			<tr>
+				<th class="col-sm-2">書籍名</th>
+				<th class="col-sm-2">作者</th>
+				<th class="col-sm-2">出版社</th>
+				<th class="col-sm-1">予約数</th>
+				<th class="col-sm-2">予約者名</th>
+				<th class="col-sm-2">電話番号</th>
+				<th class="col-sm-1">連絡希望</th>
+				<th class="col-sm-1"></th>
+				<th class="col-sm-1"></th>
+			</tr>
+			<tr th:each="list : ${orderlist}">
+				<td th:text="${list.title}">書籍名</td>
+				<td th:text="${list.publisher}">作者</td>
+				<td th:text="${list.writer}">出版社</td>
+				<td th:text="${list.number}">予約数</td>
+				<td th:text="${list.name}">予約者名</td>
+				<td th:text="${list.tel}">電話番号</td>
+				<td th:text="${list.call}">連絡希望</td>
+				<td>
+					<form method="post">
+						<input type="submit" name="form" value="編集" />
+					</form>
+				</td>				
+				<td>
+					<form method="post">
+						<input type="submit" name="form" value="削除"/>
+					</form>
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

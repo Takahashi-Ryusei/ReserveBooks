@@ -62,7 +62,7 @@ public class ReserveBooksController {
 	  model.addAttribute("book",bf);
 	  return "books/check";
   }
-  
+
   @RequestMapping(value="/list", method=RequestMethod.GET)
   String list(Model model) {
 	  List<ReserveBooksForm> orderlist = new ArrayList<ReserveBooksForm>();

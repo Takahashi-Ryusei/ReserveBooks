@@ -1,0 +1,8 @@
+---
+applications:
+ - name: ReserveBooks
+#   random-route: true
+   host: ReservBooks-TE4A
+   path: target/ReserveBooks-0.0.1-SNAPSHOT.jar
+   memory: 128M
+   instances: 1

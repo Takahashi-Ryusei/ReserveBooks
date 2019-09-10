@@ -21,5 +21,5 @@ public class ReserveBooksForm {
   private String name;
   @NotBlank(message ="電話番号は必ず入力してください")
   private String tel;
-  private Integer call;
+  private String call;
 }

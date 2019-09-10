@@ -73,4 +73,18 @@ public class ReserveBooksController {
 	  model.addAttribute("orderlist",orderlist);
 	  return "books/list";
   }
+  @RequestMapping(value="/books", method=RequestMethod.POST)
+  String back(Model model, ReserveBooksForm form) {
+	  ReserveBooksForm bf=new ReserveBooksForm();
+	  bf.setTitle(form.getTitle());
+	  bf.setPublisher(form.getPublisher());
+	  bf.setWriter(form.getWriter());
+	  bf.setNumber(form.getNumber());
+	  bf.setName(form.getName());
+	  bf.setTel(form.getTel());
+	  bf.setCall(form.getCall());
+	model.addAttribute("message","test");
+	  model.addAttribute("book",bf);
+	  return "books/reserve";
+}
 }

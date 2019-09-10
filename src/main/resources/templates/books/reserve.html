@@ -10,7 +10,7 @@
     <h1>書籍　注文</h1><br>
     <form action="/books/check" method="POST" th:object="${reserveBooksForm}">
     
-    <p>注文する本</p><p><input type="text" name="booktitle" th:field="*{title}" ><input type="text" name="publisher" placeholder="出版社"　th:field="*{publisher}"></p>
+    <p>注文する本</p><p><input type="text" name="booktitle" placeholder="タイトル" th:field="*{title}" ><input type="text" name="publisher" placeholder="出版社"　th:field="*{publisher}"></p>
     <input type="text" name="writer" placeholder="作者名" th:field="*{writer}"><input type="text" name="number" placeholder="冊数"th:field="*{number}"><br>
     <p>なまえ</p><input type="text" name="name" placeholder="なまえ" th:field="*{name}" ><br>    
     <p>電話番号</p><input type="tel" name="tel"  th:field="*{tel}"><br>

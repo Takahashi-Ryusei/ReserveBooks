@@ -28,8 +28,8 @@
     </select>
     <p>なまえ</p><input type="text" name="name" placeholder="なまえ" th:field="*{name}" ><br>    
     <p>電話番号</p><input type="tel" name="tel"  th:field="*{tel}" pattern="\d{2,4}-?\d{3,4}-?\d{3,4}" placeholder="090-1234-5678"><br>
-    <p>連絡希望<input type="radio" name="call" value=する th:checked="${call == 'する ' || }">する
-　　　　<input type="radio" name="call" value=しない th:checked="${call == 'しない'}">しない</p><br>
+    <p>連絡希望<input type="radio" name="call" value=する  th:checked="${reserveBooksForm == null || reserveBooksForm.call == null || reserveBooksForm.call =='する'}">する
+　　　　<input type="radio" name="call" value=しない th:checked="${reserveBooksForm.call == 'しない'}">しない</p><br>
 	<p><button type="submit">確定</button></p>
 	</form>
     

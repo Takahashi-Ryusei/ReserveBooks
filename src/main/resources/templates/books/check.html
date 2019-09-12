@@ -44,7 +44,7 @@
 						</form>
 					</div>
 					<div>
-						<form action="/books/reserve" method="GET" th:object="${reserveBooksForm}">
+						<form action="/books/reserve" method="POST" th:object="${reserveBooksForm}">
 							<button type="submit"class="btn btn-default btn-lg btn-inline" name="backBtn" >修正</button>
 								<input type="hidden" name="title" th:value="${book.title}" />
 								<input type="hidden" name="publisher" th:value="${book.publisher}" />

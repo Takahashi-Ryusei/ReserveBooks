@@ -48,6 +48,7 @@ public class ReserveBooksController {
 		//model.addAttribute("books", bookService.findAll());
 		return "books/reserve";
 	}
+	
 	@RequestMapping(value = "/check", method = RequestMethod.POST)
 	String list2(Model model, @Validated ReserveBooksForm form, BindingResult result) {
 		ReserveBooksForm bf = new ReserveBooksForm();
@@ -77,5 +78,19 @@ public class ReserveBooksController {
 
 		model.addAttribute("orderlist", orderlist);
 		return "books/list";
+	}
+	@RequestMapping(value="/reserve", method=RequestMethod.POST)
+	String back(Model model, ReserveBooksForm form) {
+		ReserveBooksForm bf=new ReserveBooksForm();
+	    bf.setTitle(form.getTitle());
+	    bf.setPublisher(form.getPublisher());
+	    bf.setWriter(form.getWriter());
+	    bf.setNumber(form.getNumber());
+	    bf.setName(form.getName());
+	    bf.setTel(form.getTel());
+	    bf.setCall(form.getCall());
+	    model.addAttribute("message","test");
+	    model.addAttribute("book",bf);
+	    return "books/reserve";
 	}
 }

@@ -20,18 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping("books")
 public class ReserveBooksController {
 	private static final Logger log = LoggerFactory.getLogger(ReserveBooksController.class);
-
-//  @Autowired
-//  ReserveBooksService bookService;//
-//  @ModelAttribute 
-//  ReserveBooksForm setUpForm() {
-//    return new ReserveBooksForm();
-//  }
-	/**
-	 * モデルを初期化する
-	 * 
-	 * @return ScoreForm モデルにセットするScoreForm
-	 */
+	
 	@ModelAttribute
 	ReserveBooksForm ReserveBooksForm() {
 		return new ReserveBooksForm();

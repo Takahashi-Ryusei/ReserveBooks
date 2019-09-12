@@ -16,12 +16,20 @@
         th:class="${e.global}? globalerrMsg : fielderrMsg" th:text="${e.message}" />
     </ul>
     
-    <p>注文する本</p><p><input type="text" name="booktitle" th:field="*{title}" ><input type="text" name="publisher" placeholder="出版社"  th:field="*{publisher}"></p>
-    <input type="text" name="writer" placeholder="作者名" th:field="*{writer}"><input type="text" name="number" placeholder="冊数" th:field="*{number}"><br>
+    <p>注文する本</p><p><input type="text" name="booktitle" th:field="*{title}" >
+    <input type="text" name="publisher" placeholder="出版社"  th:field="*{publisher}"></p>
+    <input type="text" name="writer" placeholder="作者名" th:field="*{writer}">
+    <select name="name" th:field="*{number}">
+   	  <option value="1">1</option>
+  	  <option value="2">2</option>
+  	  <option value="3">3</option>
+  	  <option value="4">4</option>
+  	  <option value="5">5</option>
+    </select>
     <p>なまえ</p><input type="text" name="name" placeholder="なまえ" th:field="*{name}" ><br>    
     <p>電話番号</p><input type="tel" name="tel"  th:field="*{tel}" pattern="\d{2,4}-?\d{3,4}-?\d{3,4}" placeholder="090-1234-5678"><br>
-    <p>連絡希望<input type="radio" name="call" value=1 >する
-　　　　<input type="radio" name="call" value=0 checked>しない</p><br>
+    <p>連絡希望<input type="radio" name="call" value=する  th:checked="${reserveBooksForm == null || reserveBooksForm.call == null || reserveBooksForm.call =='する'}">する
+　　　　<input type="radio" name="call" value=しない th:checked="${reserveBooksForm.call == 'しない'}">しない</p><br>
 	<p><button type="submit">確定</button></p>
 	</form>
     

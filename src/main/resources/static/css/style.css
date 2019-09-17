@@ -1,4 +1,1 @@
-.marquee {
-overflow:-webkit-marquee;
-white-space:nowrap;
-}
+span.title {font-size: 72px; }
